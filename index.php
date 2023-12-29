@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<?php include_once "./api/db.php";?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0039) -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -15,11 +16,13 @@
 	<div id="alerr" style="background:rgba(51,51,51,0.8); color:#FFF; min-height:100px; width:300px; position:fixed; display:none; z-index:9999; overflow:auto;">
 		<pre id="ssaa"></pre>
 	</div>
-	<iframe name="back" style="display:none;"></iframe>
-	<div id="all">
+	
+	<div id="all"> 
 		<div id="title">
-			<? date("m月d日 l"); ?> | 今日瀏覽: 1 | 累積瀏覽: 36
-			<a href="index.php" style="float:right"></a>
+			<? date("m月d日 l"); ?> | 
+			今日瀏覽: <?=$Total->find(['date'=>date("Y-m-d")])['total'];?> | 
+			累積瀏覽: <?=$Total->sum('total');?>
+			<a href="index.php" style="float:right">回首頁</a>
 		</div>
 		<div id="title2" title="健康促進網-回首頁">
 			<img src="./icon/02B01.jpg" alt="">
@@ -40,6 +43,15 @@
 						<a href="?do=login">會員登入</a>
 					</span>
 					<div class="">
+						<?php
+							$do=$_GET['do']??'main';
+							$file="./front/{$do}.php";
+							if(file_exists($file)){
+								include $file;
+							}else{
+								include "./front/main.php";
+							}
+						?>
 					</div>
 				</div>
 			</div>
