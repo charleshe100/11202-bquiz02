@@ -1,3 +1,4 @@
+<div class="aut tab">
 <fieldset>
     <legend>會員註冊</legend>
     <span style="color:red">*請設定您要註冊的帳號及密碼（最長12個字元）</span>
@@ -25,3 +26,4 @@
 
     </table>
 </fieldset>
+</div>
