@@ -6,6 +6,7 @@
         margin-left: -1px;
         border-radius: 5px 5px 0 0;
         text-align: center;
+        background-color: #eee;
     }
 
     .tags {
@@ -19,11 +20,12 @@
         margin-top: -1px;
         border-radius: 0 10px 10px 10px;
         display: none;
-        padding: 15px;
+        padding: 15px;        
     }
 
     .active {
         border-bottom: 1px solid white;
+        background-color: white;
     }
 </style>
 
