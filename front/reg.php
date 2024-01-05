@@ -4,11 +4,11 @@
     <span style="color:red">*請設定您要註冊的帳號及密碼（最長12個字元）</span>
     <table>
         <tr>
-            <td class="clo">Step1：帳號</td>
+            <td class="clo">Step1：登入帳號</td>
             <td><input type="text" name="acc" id="acc" max="12"></td>
         </tr>
         <tr>
-            <td class="clo">Step2：密碼</td>
+            <td class="clo">Step2：登入密碼</td>
             <td><input type="password" name="pw" id="pw" max="12"></td>
         </tr>
         <tr>

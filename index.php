@@ -19,7 +19,7 @@
 	
 	<div id="all"> 
 		<div id="title">
-			<? date("m月d日 l"); ?> | 
+			<?=date("m月d日 l"); ?> | 
 			今日瀏覽: <?=$Total->find(['date'=>date("Y-m-d")])['total'];?> | 
 			累積瀏覽: <?=$Total->sum('total');?>
 			<a href="index.php" style="float:right">回首頁</a>
@@ -40,7 +40,18 @@
 					<marquee style="width:78%; display:inline-block;">請民眾踴投稿電子報，讓電子報成為大家相互交流、分享的園地！詳見最新文章</marquee>
 
 					<span style="width:18%; display:inline-block;">
+					<?php 
+					if(!isset($_SESSION['user'])){
+					?>
 						<a href="?do=login">會員登入</a>
+						<?php 
+					}else{
+					?>		
+						歡迎,<?=$_SESSION['user'];?> 
+						<button>登出</button>
+					<?php 
+					}
+					?>	
 					</span>
 					<div class="">
 						<?php
