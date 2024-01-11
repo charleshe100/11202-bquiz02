@@ -20,21 +20,22 @@
 			display: none;
 			z-index: 9999;
 			overflow: auto;
-			padding: 10px;
+			padding:10px;
 		}
 	</style>
 </head>
 
 <body>
+
 	<div id="all">
 		<div id="title">
 			<?= date("m月d日 l"); ?> |
 			今日瀏覽: <?= $Total->find(['date' => date("Y-m-d")])['total']; ?> |
 			累積瀏覽: <?= $Total->sum('total'); ?>
-			<a href="index.php" style="float:right">回首頁</a>
+			<a href="index.php" style='float:right'>回首頁</a>
 		</div>
-		<div id="title2" title="健康促進網-回首頁">
-			<a href="index.php"><img src="./icon/02B01.jpg" alt=""></a>
+		<div id="title2" title='健康促進網-回首頁'>
+			<a href='index.php'><img src="./icon/02B01.jpg" alt=""></a>
 		</div>
 		<div id="mm">
 			<div class="hal" id="lef">
@@ -43,11 +44,10 @@
 				<a class="blo" href="?do=pop">人氣文章</a>
 				<a class="blo" href="?do=know">講座訊息</a>
 				<a class="blo" href="?do=que">問卷調查</a>
-				<a class="blo" href="./mackliu-web91_02/index.php">題組二</a>
 			</div>
 			<div class="hal" id="main">
 				<div>
-					<marquee style="width:80%; display:inline-block;">請民眾踴投稿電子報，讓電子報成為大家相互交流、分享的園地！詳見最新文章</marquee>
+					<marquee style="width:80%; display:inline-block;">請民眾踴躍投稿電子報，讓電子報成為大家相互交流、分享的園地！詳見最新文章</marquee>
 
 					<span style="width:16%; display:inline-block;">
 						<?php
@@ -77,6 +77,7 @@
 						} else {
 							include "./front/main.php";
 						}
+
 						?>
 					</div>
 				</div>

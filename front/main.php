@@ -7,6 +7,7 @@
         border-radius: 5px 5px 0 0;
         text-align: center;
         background-color: #eee;
+        cursor: pointer;
     }
 
     .tags {
@@ -30,7 +31,7 @@
 </style>
 
 <div class="tags">
-    <!-- 這個active是做為預設 -->
+                    <!-- 這個active是做為預設 -->
     <div id="sec1" class="tag active">健康新知</div>
     <div id="sec2" class="tag">菸害防治</div>
     <div id="sec3" class="tag">癌症防治</div>
